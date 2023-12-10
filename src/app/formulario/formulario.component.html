@@ -1,0 +1,19 @@
+<div class="container-flex main">
+    <div class="row">
+        <p class="col-md-1 col-3 label">Codigo</p>
+        <div class="col-md-3  col-7">
+            <input #formNombre type="text" name="nombre" id="nombre" placeholder="TA3" class="form-control" >
+        </div>
+        <p class="offset-md-1 offset-3 err" #nameErr hidden>Introduzca nombre a para la tarea</p>
+    </div>
+    <div class="row">
+        <p class="col-md-1 col-3 label">Descripción</p>
+        <div class="col-md-3  col-7">
+            <input #formDesc type="text" name="descripcion" id="descripcion" placeholder="Es un ..." class="form-control">
+        </div>
+        <p class="offset-md-1 offset-3 err" #descErr hidden>Introduzca una descripción</p>
+    </div>
+    <div class="row-flex justify-content-center">   
+        <button (click)="clickGuardar()" class="btn btn-primary" id="guardarBtn">Añadir</button>
+    </div>
+</div>

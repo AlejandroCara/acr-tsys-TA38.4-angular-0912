@@ -1,0 +1,23 @@
+<h1>Administración de artículos</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Borrar</th>
+            <th>Seleccionar</th>
+        </thead>
+        <tbody>
+            @for (row of rows; track $index) {
+                <tr class="ended">
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td><button (click)="deleteRow($index)" class="btn btn-danger">Borrar</button></td>
+                    <td><button (click)="terminar($index)" class="btn btn-success">Terminar</button></td>
+                </tr>
+              } @empty {
+                
+              }
+        </tbody>
+    </table>
+</div>
